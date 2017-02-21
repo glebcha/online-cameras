@@ -1,0 +1,48 @@
+@import './variables/general';
+@import './mixins/general';
+@import './vendor/normalize';
+
+html {
+  font-size: 62.5%;
+  font-family: 'Helvetica', Arial, sans-serif;
+}
+
+html,
+body {
+  .relative;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+    background: @gray;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea {
+    outline: none;
+}
+
+div[tabindex="-1"]:focus {
+    outline: 0;
+}
+
+#root {
+    .fullheight;
+}
+
+.container {
+  .clearfix;
+  padding: .5rem;
+}
+
+.row {
+    .clearfix;
+}

@@ -1,0 +1,39 @@
+@import '../../styles/mixins/general';
+@import '../../styles/variables/general';
+
+@component: styled-checkbox;
+
+.@{component} {
+    input {
+        position: absolute;
+        opacity: 0;
+
+        + label {
+            position: relative;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        + label:before {
+            font-size: 2rem;
+            display: inline-block;
+            vertical-align: text-top;
+            width: 2rem;
+            height: 2rem;
+            margin-right: 1rem;
+            content: '\2605';
+        }
+
+        &:hover + label:before {
+            color: @yellow;
+        }
+
+        &:checked + label:before {
+            color: @yellow;
+        }
+
+        &.disabled + label, &[disabled] + label {
+            color: @gray;
+        }
+    }
+}
